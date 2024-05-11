@@ -1,13 +1,13 @@
 import { Footer } from "@/components/common/footer";
 import { CertificateSection } from "@/components/home/certificates-section";
 import { ContactSection } from "@/components/home/contact-section";
+import { ExperienceSection } from "@/components/home/experience-section";
 import { Hero } from "@/components/home/hero";
 import { ChatBoot } from "@/components/home/hero/ChatBoot";
 import { AboutSection } from "@/components/home/hero/about-section";
 import { ProjectSection } from "@/components/home/project-section";
 import { SkillSection } from "@/components/home/skill-section";
 import { Locale, Stage } from "@/generated/graphql";
-import { env } from "@/utils";
 import { GRAPH_SDK } from "@/utils/sdk";
 import {
   AiFillSafetyCertificate,
@@ -58,6 +58,7 @@ export default async function Home() {
           ]}
         />
         <AboutSection />
+        <ExperienceSection />
         <SkillSection categories={categories as any} />
         <ProjectSection projects={projects as any} />
         <CertificateSection certifications={certifications as any} />
@@ -69,4 +70,4 @@ export default async function Home() {
   );
 }
 
-export const revalidate = env.revalidate;
+export const revalidate = 366;

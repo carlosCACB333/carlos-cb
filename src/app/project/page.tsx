@@ -6,7 +6,6 @@ import { Searcher } from "@/components/common/Searcher";
 import { ProjectCard } from "@/components/project/ProjectCard";
 import { Project } from "@/generated/graphql";
 import { usePagination } from "@/hooks";
-import { env } from "@/utils";
 
 const ProjectPage = () => {
   const { data, onSearch, onChangePage } = usePagination(searchProjects, "", 4);
@@ -37,4 +36,3 @@ const ProjectPage = () => {
 
 export default ProjectPage;
 
-export const revalidate = env.revalidate;

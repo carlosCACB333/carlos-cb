@@ -2,7 +2,6 @@ import { MDXContent } from "@/components/md/MDXContent";
 import { ProjectCarrousel } from "@/components/project/ProjectCarrousel";
 import { Project, Stage } from "@/generated/graphql";
 import { PageProps } from "@/interfaces";
-import { env } from "@/utils";
 import { GRAPH_SDK } from "@/utils/sdk";
 import { Metadata, ResolvedMetadata } from "next";
 import { notFound } from "next/navigation";
@@ -39,7 +38,7 @@ export async function generateStaticParams() {
   }));
 }
 
-export const revalidate = env.revalidate;
+export const revalidate = 366;
 
 export async function generateMetadata(
   { params }: PageProps,

@@ -59,10 +59,10 @@ export const ContactSection = () => {
     <>
       <section
         className={sectionWrapper({
-          class: "z-20 mt-16 lg:mt-44 max-w-4xl",
+          class: "z-20 mt-16 lg:mt-44 flex items-center",
         })}
       >
-        <div className="flex flex-col gap-8">
+        <div className="flex flex-col gap-8 max-w-4xl">
           <Card>
             <CardBody>
               <div className="grid gap-4 grid-cols-1 md:grid-cols-2">

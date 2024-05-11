@@ -4,22 +4,21 @@ import {
   Table,
   TableBody,
   TableCell,
-  TableRow,
-  TableHeader,
   TableColumn,
+  TableHeader,
+  TableRow,
 } from "@nextui-org/react";
 
-import { title, subtitle, sectionWrapper } from "@/components";
-import { useAuthor } from "@/hooks";
-import { MDXContent } from "@/components/md/MDXContent";
-import { AiFillHeart } from "react-icons/ai";
-import { IMG } from "@/components/common/IMG";
 import { sizes } from "@/assets";
+import { sectionWrapper, subtitle, title } from "@/components";
+import { IMG } from "@/components/common/IMG";
+import { MDXContent } from "@/components/md/MDXContent";
+import { useAuthor } from "@/hooks";
+import { AiFillHeart } from "react-icons/ai";
 
 export const AboutSection = () => {
   const { author } = useAuthor();
   const fullName = `${author.firstName} ${author.lastName}`;
-  const age = new Date().getFullYear() - new Date(author.birth).getFullYear();
   const photo = author.photos.at(-1)!;
 
   return (
@@ -69,10 +68,6 @@ export const AboutSection = () => {
               <TableRow key={2}>
                 <TableCell>Correo</TableCell>
                 <TableCell>{author.email}</TableCell>
-              </TableRow>
-              <TableRow key={3}>
-                <TableCell>Edad</TableCell>
-                <TableCell>{age}</TableCell>
               </TableRow>
               <TableRow key={5}>
                 <TableCell>Profesión</TableCell>

@@ -4,7 +4,7 @@ import { IMG } from "@/components/common/IMG";
 import { MDXContent } from "@/components/md/MDXContent";
 import { Stage } from "@/generated/graphql";
 import { PageProps } from "@/interfaces";
-import { env, formatDate } from "@/utils";
+import { formatDate } from "@/utils";
 import { GRAPH_SDK } from "@/utils/sdk";
 import { Button } from "@nextui-org/button";
 import { Metadata, ResolvedMetadata } from "next";
@@ -58,7 +58,7 @@ export async function generateStaticParams() {
   }));
 }
 
-export const revalidate = env.revalidate;
+export const revalidate = 366;
 
 export async function generateMetadata(
   { params }: PageProps,

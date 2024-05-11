@@ -1,8 +1,7 @@
-export * from "./types";
-export * from "./author";
-export * from "./certification";
-export * from "./post";
-export * from "./project";
-export * from "./tools";
-
+export * from "@/action/author";
+export * from "@/action/certification";
+export * from "@/action/post";
+export * from "@/action/project";
+export * from "@/action/tools";
+export * from "@/action/types";
 
