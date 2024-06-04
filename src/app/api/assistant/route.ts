@@ -38,6 +38,8 @@ export async function POST(req: Request) {
     presence_penalty: 1,
   });
 
+  console.log("############", response);
+
   const stream = OpenAIStream(response, {});
   return new StreamingTextResponse(stream);
 }

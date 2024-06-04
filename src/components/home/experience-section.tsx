@@ -51,7 +51,7 @@ export const ExperienceSection = () => {
                 Enero 2021 - Actualidad
               </time>
               <p className={subtitle({ fullWidth: true })}>
-                Implementé y mantuve los microservicios de la billera digital{" "}
+                Implementé y mantuve los microservicios de la billetera digital{" "}
                 <span className="text-pink-500">BIM</span> usando tecnologías
                 como:
               </p>
