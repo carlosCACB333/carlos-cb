@@ -1,4 +1,4 @@
-import { getAuthor, getCookie } from "@/action";
+import { getAuthor } from "@/action";
 import { Cmdk } from "@/components/common/cmdk";
 import { Navbar } from "@/components/common/navbar";
 import { fontRoboto } from "@/config/fonts";
@@ -18,7 +18,7 @@ export default async function RootLayout({
   children: React.ReactNode;
 }) {
   const author = await getAuthor(Locale.Es);
-  const defaultTheme = await getCookie("theme", "dark");
+  // const defaultTheme = await getCookie("theme", "dark");
 
   return (
     <html suppressHydrationWarning dir="ltr" lang="es">
@@ -31,7 +31,11 @@ export default async function RootLayout({
         )}
       >
         <Providers
-          themeProps={{ attribute: "class", defaultTheme, children: undefined }}
+          themeProps={{
+            attribute: "class",
+            defaultTheme: "dark",
+            children: undefined,
+          }}
           author={author as any}
         >
           <div className="relative flex flex-col" id="app-container">

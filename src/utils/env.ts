@@ -12,16 +12,8 @@ export const env = {
     password: process.env.AUTHOR_PASSWORD || "",
   },
   revalidate: 3600,
-  openIa: {
-    apiKey: process.env.OPENAI_API_KEY || "",
-  },
+  webLlmModel: process.env.NEXT_PUBLIC_WEB_LLM_MODEL || "",
   apiKey: process.env.API_KEY || "",
-
-  pinecone: {
-    apiKey: process.env.PINECONE_API_KEY || "",
-    index: process.env.PINECONE_INDEX || "",
-    selfNameSpace: process.env.PINECONE_SELF_NAMESPACE || "",
-  },
 };
 
 export const ALLOWED_LOCALES = ["es", "en"];

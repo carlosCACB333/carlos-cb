@@ -8,6 +8,7 @@ import { AboutSection } from "@/components/home/hero/about-section";
 import { ProjectSection } from "@/components/home/project-section";
 import { SkillSection } from "@/components/home/skill-section";
 import { Locale, Stage } from "@/generated/graphql";
+import { env } from "@/utils";
 import { GRAPH_SDK } from "@/utils/sdk";
 import {
   AiFillSafetyCertificate,
@@ -70,4 +71,4 @@ export default async function Home() {
   );
 }
 
-export const revalidate = 366;
+export const revalidate = env.revalidate;
