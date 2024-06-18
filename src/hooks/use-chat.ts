@@ -37,14 +37,14 @@ export const useChat = () => {
           {
             role: "system",
             content:
-              'Eres el asistente virtual de Carlos. Responde las preguntas de que te hagan siempre en tercera persona. no inventas nada, si no tienes la información responde con un "no tengo información sobre eso" a continuación te dejo el contexto: ' +
+              'Eres el asistente virtual de Carlos. Responde las preguntas que te hagan siempre en tercera persona, de manera breve y solo centrandote en la pregunta(no des mas información). no inventas nada, si no tienes la información responde con un "no tengo información sobre eso" a continuación tienes todo el contexto necesario: ' +
               aboutme,
           },
 
           ...user_msgs.slice(-4),
         ],
         stream: true,
-        max_tokens: 150,
+        temperature: 0.5,
       });
       let completion = "";
       for await (const chunk of chunks) {
