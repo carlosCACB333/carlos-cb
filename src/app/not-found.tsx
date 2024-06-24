@@ -1,8 +1,7 @@
 "use client";
-import React from "react";
 import notfound from "@/assets/img/not-found.svg";
-import Image from "next/image";
 import { Button, Link } from "@nextui-org/react";
+import Image from "next/image";
 
 export const NotFound = () => {
   return (
